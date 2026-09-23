@@ -1,0 +1,50 @@
+FECHA Y HORA
+============
+2026-09-22 22:11:25
+
+
+TIPO DE EJERCICIO
+=================
+pedido
+
+
+MODELO
+======
+meta-llama/Llama-3.1-8B-Instruct
+
+
+PROVEEDOR
+=========
+auto
+
+
+CONSUMO DE TOKENS
+=================
+
+Tokens de entrada : 2305
+Tokens de salida  : 138
+Tokens totales    : 2443
+
+
+RESPUESTA DEL MODELO
+====================
+
+Estado de la solicitud:
+Número de seguimiento: ECO-10004
+
+Información disponible:
+El pedido corresponde a un Kit de cubiertos reutilizables.
+
+Estado actual:
+Retrasado
+
+Fecha estimada de entrega: 28/09/2026
+
+Motivo del retraso:
+Retraso logístico de la transportadora.
+
+Transportadora: Servientrega
+
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10004
+
+Disculpa por el retraso en tu pedido. El motivo del retraso es un retraso logístico de la transportadora Servientrega.

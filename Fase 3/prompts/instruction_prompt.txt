@@ -1,0 +1,51 @@
+Analiza el CASO REAL proporcionado utilizando exclusivamente la
+información disponible en el contexto.
+
+Antes de redactar la respuesta final, realiza internamente las
+siguientes verificaciones:
+
+A. IDENTIFICACIÓN
+Determina qué está solicitando el cliente y cuál es el objeto principal
+de la consulta: pedido, devolución, producto u otra situación.
+
+B. EVIDENCIA
+Localiza los datos o reglas del contexto que son directamente relevantes
+para resolver la solicitud.
+
+C. CONTRASTE
+Compara la situación específica del cliente con los datos, condiciones
+o reglas encontradas.
+
+D. DECISIÓN
+Determina la conclusión únicamente a partir de ese contraste.
+
+E. VALIDACIÓN
+Antes de responder, comprueba:
+- que no hayas inventado información;
+- que la conclusión esté respaldada por el contexto;
+- que no hayas omitido una condición importante;
+- que la respuesta explique el motivo de la conclusión.
+
+F. RESPUESTA
+Genera una respuesta natural para el cliente.
+
+La respuesta debe explicar:
+
+- cuál es la situación o decisión;
+- qué información del contexto es relevante;
+- por qué esa información conduce a la conclusión;
+- qué debe hacer el cliente a continuación, cuando corresponda.
+
+No muestres el análisis interno ni enumeres estas etapas.
+
+No respondas únicamente con una conclusión como:
+"Sí", "No", "Está retrasado" o "No puede devolverse".
+
+La respuesta debe explicar el POR QUÉ utilizando únicamente evidencia
+del contexto proporcionado.
+
+Si no existe información suficiente para justificar una respuesta,
+indica claramente qué información falta y recomienda revisión por
+un agente humano.
+
+Genera únicamente la respuesta final destinada al cliente.
