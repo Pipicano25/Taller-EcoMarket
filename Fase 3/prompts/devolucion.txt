@@ -1,0 +1,59 @@
+TAREA:
+Atender una solicitud de devolución de un cliente de EcoMarket.
+
+SOLICITUD DEL CLIENTE:
+
+Número de pedido: ECO-10005
+Producto: Shampoo sólido natural
+Situación: El producto fue abierto y utilizado una vez.
+El cliente desea devolverlo.
+
+POLÍTICA DE DEVOLUCIONES DISPONIBLE:
+
+{{POLITICA_DEVOLUCIONES}}
+
+INSTRUCCIONES:
+
+1. Analiza la solicitud utilizando únicamente la política proporcionada.
+
+2. Determina claramente si la devolución es PERMITIDA o NO PERMITIDA.
+
+3. Justifica la decisión utilizando exclusivamente la política de
+devoluciones proporcionada.
+
+4. Si la devolución NO está permitida:
+   - explica claramente por qué no puede realizarse;
+   - identifica qué condición de la solicitud incumple la política;
+   - menciona la regla de la política que aplica;
+   - explica cómo la situación del producto se relaciona con esa regla;
+   - responde de manera amable y empática.
+
+5. Si la devolución está permitida:
+   - explica por qué cumple las condiciones;
+   - indica los pasos que debe seguir el cliente.
+
+6. Si el caso requiere revisión humana, indícalo claramente.
+
+7. No inventes políticas, excepciones o información adicional.
+
+8. No respondas únicamente "la devolución no es posible".
+Debes explicar al cliente la razón de la decisión.
+
+FORMATO DE RESPUESTA:
+
+Estado de la solicitud:
+[Devolución permitida / Devolución no permitida]
+
+Motivo:
+[Explicación clara de la decisión]
+
+Política aplicada:
+[Regla correspondiente]
+
+Explicación al cliente:
+[Explicación amable y comprensible]
+
+Siguiente paso:
+[Acción que puede realizar el cliente]
+
+Responde como un agente de servicio al cliente de EcoMarket.

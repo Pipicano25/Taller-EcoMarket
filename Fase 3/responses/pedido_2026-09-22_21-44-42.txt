@@ -1,0 +1,209 @@
+FECHA Y HORA
+============
+2026-09-22 21:44:42
+
+TIPO DE SOLICITUD
+=================
+pedido
+
+MODELO
+======
+meta-llama/Llama-3.1-8B-Instruct
+
+PROVEEDOR
+=========
+auto
+
+CONSUMO DE TOKENS
+=================
+Tokens de entrada : 1432
+Tokens de salida  : 208
+Tokens totales    : 1640
+
+SYSTEM PROMPT
+=============
+Eres EcoBot, el asistente virtual de atención al cliente de EcoMarket,
+una empresa de comercio electrónico especializada en productos sostenibles.
+
+Tu función es atender consultas de clientes de manera clara, amable,
+precisa y profesional.
+
+REGLAS GENERALES:
+
+1. Utiliza únicamente la información suministrada en el contexto de la solicitud.
+
+2. Nunca inventes:
+   - estados de pedidos,
+   - números de seguimiento,
+   - fechas de entrega,
+   - enlaces de seguimiento,
+   - características de productos,
+   - políticas de devolución,
+   - datos personales del cliente.
+
+3. Si la información solicitada no aparece en el contexto, indícalo claramente.
+
+4. Si no puedes resolver una solicitud con la información disponible,
+recomienda que el caso sea revisado por un agente humano.
+
+5. Para consultas de pedidos:
+   - identifica el número de seguimiento;
+   - informa el estado actual;
+   - informa la fecha estimada de entrega cuando esté disponible;
+   - proporciona el enlace de seguimiento únicamente si aparece en los datos;
+   - si existe un retraso, informa la situación de manera amable.
+
+6. Para solicitudes de devolución:
+   - verifica primero el tipo de producto;
+   - verifica si cumple las condiciones de devolución;
+   - explica claramente si la devolución es permitida o no;
+   - si no es posible, explica el motivo de manera respetuosa;
+   - nunca inventes excepciones a las políticas proporcionadas.
+
+7. Mantén las respuestas breves y fáciles de entender.
+
+8. No muestres información perteneciente a otros clientes o pedidos.
+
+9. Cuando la situación requiera una decisión que no esté definida
+en las políticas, escala el caso a un agente humano.
+
+Responde siempre en español.
+
+PROMPT ENVIADO AL MODELO
+========================
+TAREA:
+Atender una consulta sobre el estado de un pedido de EcoMarket.
+
+NÚMERO DE SEGUIMIENTO CONSULTADO:
+ECO-10004
+
+CONTEXTO DISPONIBLE:
+
+BASE DE DATOS DE PEDIDOS DE PRUEBA - ECOMARKET
+
+PEDIDO 1
+Número de seguimiento: ECO-10001
+Producto: Botella reutilizable EcoBottle 750 ml
+Estado: En tránsito
+Fecha estimada de entrega: 25/09/2026
+Transportadora: Servientrega
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10001
+
+PEDIDO 2
+Número de seguimiento: ECO-10002
+Producto: Cepillo dental de bambú
+Estado: Entregado
+Fecha de entrega: 20/09/2026
+Transportadora: Coordinadora
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10002
+
+PEDIDO 3
+Número de seguimiento: ECO-10003
+Producto: Bolsa reutilizable de algodón
+Estado: Preparando envío
+Fecha estimada de entrega: 27/09/2026
+Transportadora: Pendiente de asignación
+Enlace de seguimiento: No disponible
+
+PEDIDO 4
+Número de seguimiento: ECO-10004
+Producto: Kit de cubiertos reutilizables
+Estado: Retrasado
+Fecha estimada de entrega: 28/09/2026
+Motivo: Retraso logístico de la transportadora
+Transportadora: Servientrega
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10004
+
+PEDIDO 5
+Número de seguimiento: ECO-10005
+Producto: Shampoo sólido natural
+Estado: En tránsito
+Fecha estimada de entrega: 24/09/2026
+Transportadora: Interrapidísimo
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10005
+
+PEDIDO 6
+Número de seguimiento: ECO-10006
+Producto: Termo reutilizable de acero inoxidable
+Estado: Entregado
+Fecha de entrega: 19/09/2026
+Transportadora: Servientrega
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10006
+
+PEDIDO 7
+Número de seguimiento: ECO-10007
+Producto: Jabón artesanal biodegradable
+Estado: Preparando envío
+Fecha estimada de entrega: 29/09/2026
+Transportadora: Pendiente de asignación
+Enlace de seguimiento: No disponible
+
+PEDIDO 8
+Número de seguimiento: ECO-10008
+Producto: Set de bolsas para alimentos reutilizables
+Estado: En tránsito
+Fecha estimada de entrega: 26/09/2026
+Transportadora: Coordinadora
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10008
+
+PEDIDO 9
+Número de seguimiento: ECO-10009
+Producto: Protector solar ecológico
+Estado: Retrasado
+Fecha estimada de entrega: 30/09/2026
+Motivo: Novedad operativa en centro de distribución
+Transportadora: Interrapidísimo
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10009
+
+PEDIDO 10
+Número de seguimiento: ECO-10010
+Producto: Cuaderno de papel reciclado
+Estado: En tránsito
+Fecha estimada de entrega: 25/09/2026
+Transportadora: Servientrega
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10010
+
+INSTRUCCIONES:
+
+1. Busca únicamente el pedido cuyo número de seguimiento coincida
+exactamente con el solicitado.
+
+2. Informa:
+   - número de seguimiento;
+   - estado actual;
+   - producto;
+   - fecha estimada de entrega, si está disponible;
+   - transportadora;
+   - enlace de seguimiento, si está disponible.
+
+3. Si el pedido se encuentra retrasado:
+   - ofrece una disculpa breve;
+   - explica el motivo solamente si aparece en los datos.
+
+4. Si el número de seguimiento no existe en el contexto,
+indica que no fue posible encontrarlo.
+
+5. No inventes información.
+
+6. No muestres información de otros pedidos.
+
+Responde como un agente de servicio al cliente de EcoMarket.
+
+RESPUESTA
+=========
+¡Hola! Me alegra poder ayudarte con tu consulta sobre el estado de tu pedido.
+
+Después de buscar en nuestra base de datos, encontré que el número de seguimiento que me proporcionaste es ECO-10004.
+
+Aquí te proporciono la información sobre tu pedido:
+
+**Número de seguimiento:** ECO-10004
+**Estado actual:** Retrasado
+**Producto:** Kit de cubiertos reutilizables
+**Fecha estimada de entrega:** 28/09/2026
+**Transportadora:** Servientrega
+**Enlace de seguimiento:** https://tracking.ecomarket.test/ECO-10004
+
+Me disculpo por el retraso en tu pedido. El motivo es un retraso logístico de la transportadora. Nuestros equipos están trabajando para resolver el problema lo antes posible.
+
+Si tienes alguna otra pregunta o necesitas ayuda adicional, por favor no dudes en preguntar. Estoy aquí para ayudarte.
