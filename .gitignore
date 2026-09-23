@@ -1,5 +1,5 @@
 .env
-responses/*.txt
+*/responses/*.txt
 !responses/.gitkeep
 __pycache__/
 *.py[cod]

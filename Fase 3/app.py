@@ -129,10 +129,7 @@ def load_prompt_settings() -> PromptSettings:
     )
 
 
-# CONFIGURACIÓN DE LOS EJERCICIOS
-def get_exercise_files(
-    exercise_type: str,
-) -> tuple[Path, list[Path], Path]:
+def get_exercise_files(exercise_type: str) -> tuple[Path, list[Path], Path]:
     """Obtiene los archivos necesarios para el tipo de solicitud.
 
     Para una consulta de pedido se utilizan:
@@ -194,9 +191,7 @@ def get_exercise_files(
     )
 
 
-def build_context(
-    context_paths: list[Path],
-) -> str:
+def build_context(context_paths: list[Path]) -> str:
     """Construye el contexto utilizando una o varias fuentes.
 
     Cada archivo se identifica explícitamente dentro del contenido
@@ -238,9 +233,7 @@ FUENTE: {context_path.name}
     )
 
 
-def build_content(
-    exercise_type: str,
-) -> str:
+def build_content(exercise_type: str) -> tuple[str, str]:
     """Construye el caso real que debe analizar el modelo.
 
     La información se mantiene separada conceptualmente en tres partes:
@@ -253,7 +246,7 @@ def build_content(
         exercise_type: Tipo de solicitud que será procesada.
 
     Returns:
-        Caso completo que será enviado al modelo.
+        Tupla con el contenido completo y la solicitud real del cliente.
 
     Raises:
         FileNotFoundError: Si falta alguno de los archivos requeridos.
@@ -298,14 +291,10 @@ INFORMACIÓN DISPONIBLE DE ECOMARKET
 {combined_context}
 """
 
-    return content.strip()
+    return content.strip(), client_request
 
 
-# CONSTRUCCIÓN DE MESSAGES
-def build_messages(
-    settings: PromptSettings,
-    content: str,
-) -> list[dict[str, str]]:
+def build_messages( settings: PromptSettings, content: str) -> list[dict[str, str]]:
     """Construye los mensajes enviados al modelo.
 
     La estructura combina:
@@ -422,12 +411,7 @@ CASO REAL A RESOLVER
     return messages
 
 
-# CONSUMO DE TOKENS
-def get_usage_value(
-    usage: Any,
-    attribute: str,
-    default: Any = "No disponible",
-) -> Any:
+def get_usage_value(usage: Any, attribute: str, default: Any = "No disponible") -> Any:
     """Obtiene de forma segura un valor del objeto de uso.
 
     Algunos proveedores de Hugging Face pueden no retornar todos los
@@ -462,12 +446,7 @@ def get_usage_value(
         return default
 
 
-# GUARDADO DE RESPUESTAS
-def save_response(
-    exercise_type: str,
-    response_text: str,
-    response: Any,
-) -> Path:
+def save_response(exercise_type: str, response_text: str, response: Any) -> Path:
     """Guarda la respuesta del modelo en un archivo TXT.
 
     El nombre del archivo contiene el tipo de solicitud y una marca
@@ -562,7 +541,6 @@ RESPUESTA DEL MODELO
     return output_file
 
 
-# VALIDACIÓN
 def validate_environment() -> None:
     """Valida la configuración mínima de la aplicación.
 
@@ -620,7 +598,6 @@ def get_exercise_from_arguments() -> str:
     return exercise_type
 
 
-# CLIENTE HUGGING FACE
 def create_client() -> InferenceClient:
     """Crea el cliente utilizado para consumir Hugging Face.
 
@@ -635,11 +612,7 @@ def create_client() -> InferenceClient:
     )
 
 
-# EJECUCIÓN DE LLAMA
-def generate_response(
-    client: InferenceClient,
-    messages: list[dict[str, str]],
-) -> Any:
+def generate_response(client: InferenceClient, messages: list[dict[str, str]]) -> Any:
     """Realiza una única solicitud al modelo Llama.
 
     Esta función representa el único punto del programa donde se
@@ -664,11 +637,7 @@ def generate_response(
     return response
 
 
-# INFORMACIÓN DE CONSOLA
-def print_execution_info(
-    exercise_type: str,
-    messages: list[dict[str, str]],
-) -> None:
+def print_execution_info(exercise_type: str, messages: list[dict[str, str]],) -> None:
     """Muestra información básica de la ejecución.
 
     Args:
@@ -677,25 +646,10 @@ def print_execution_info(
     """
 
     print("=" * 70)
-    print("ECOMARKET - LLAMA 3.1 8B INSTRUCT")
-    print("=" * 70)
-
-    print(
-        f"Tipo de solicitud : {exercise_type}"
-    )
-
-    print(
-        f"Modelo            : {HF_MODEL}"
-    )
-
-    print(
-        f"Proveedor         : {HF_PROVIDER}"
-    )
-
-    print(
-        f"Mensajes enviados : {len(messages)}"
-    )
-
+    print("ECOMARKET        -   LLAMA 3.1 8B INSTRUCT")
+    print(f"Tipo de solicitud : {exercise_type}")
+    print(f"Modelo            : {HF_MODEL}")
+    print(f"Proveedor         : {HF_PROVIDER}")
     print("=" * 70)
 
 
@@ -708,38 +662,13 @@ def print_usage(
         response: Respuesta completa retornada por Hugging Face.
     """
 
-    usage = getattr(
-        response,
-        "usage",
-        None,
-    )
+    usage = getattr(response, "usage", None)
 
-    print("\nCONSUMO DE TOKENS")
-    print("=" * 70)
-
-    print(
-        "Entrada :",
-        get_usage_value(
-            usage,
-            "prompt_tokens",
-        ),
-    )
-
-    print(
-        "Salida  :",
-        get_usage_value(
-            usage,
-            "completion_tokens",
-        ),
-    )
-
-    print(
-        "Total   :",
-        get_usage_value(
-            usage,
-            "total_tokens",
-        ),
-    )
+    print("\n", "=" * 70)
+    print("\n   CONSUMO DE TOKENS   ")
+    print("Entrada :", get_usage_value( usage, "prompt_tokens"))
+    print("Salida  :", get_usage_value( usage, "completion_tokens"))
+    print("Total   :", get_usage_value( usage, "total_tokens"))
 
 
 # MAIN
@@ -764,108 +693,41 @@ def main() -> None:
         ValueError: Si la configuración o los argumentos son inválidos.
         FileNotFoundError: Si falta alguno de los archivos requeridos.
     """
-
-    # --------------------------------------------------------
     # Validar configuración
-    # --------------------------------------------------------
-
     validate_environment()
 
-    # --------------------------------------------------------
     # Determinar tipo de solicitud
-    # --------------------------------------------------------
-
     exercise_type = get_exercise_from_arguments()
 
-    # --------------------------------------------------------
     # Cargar prompts
-    # --------------------------------------------------------
-
     settings = load_prompt_settings()
 
-    # --------------------------------------------------------
     # Construir caso real
-    # --------------------------------------------------------
+    content, client_request = build_content(exercise_type)
 
-    content = build_content(
-        exercise_type
-    )
-
-    # --------------------------------------------------------
     # Construir messages
-    # --------------------------------------------------------
+    messages = build_messages(settings=settings, content=content)
 
-    messages = build_messages(
-        settings=settings,
-        content=content,
-    )
-
-    # --------------------------------------------------------
     # Crear cliente
-    # --------------------------------------------------------
-
     client = create_client()
 
-    # --------------------------------------------------------
     # Mostrar información
-    # --------------------------------------------------------
+    print_execution_info(exercise_type=exercise_type, messages=messages)
+    print("\n                        Usuario solicitó: ", exercise_type)
+    print("\n ---> [Client] ", client_request)
 
-    print_execution_info(
-        exercise_type=exercise_type,
-        messages=messages,
-    )
-
-    # ========================================================
     # UNA ÚNICA LLAMADA A LLAMA
-    # ========================================================
+    response = generate_response(client=client, messages=messages)
 
-    response = generate_response(
-        client=client,
-        messages=messages,
-    )
-
-    # --------------------------------------------------------
     # Obtener respuesta
-    # --------------------------------------------------------
+    response_text = (response.choices[0].message.content)
+    print("\n ---> [EcoBot] ", response_text)
 
-    response_text = (
-        response
-        .choices[0]
-        .message
-        .content
-    )
-
-    # --------------------------------------------------------
-    # Mostrar respuesta
-    # --------------------------------------------------------
-
-    print("\nRESPUESTA DEL MODELO")
-    print("=" * 70)
-
-    print(response_text)
-
-    # --------------------------------------------------------
     # Mostrar consumo
-    # --------------------------------------------------------
+    print_usage(response)
 
-    print_usage(
-        response
-    )
-
-    # --------------------------------------------------------
     # Guardar respuesta
-    # --------------------------------------------------------
-
-    output_file = save_response(
-        exercise_type=exercise_type,
-        response_text=response_text,
-        response=response,
-    )
-
-    print("\nRESPUESTA GUARDADA EN")
-    print("=" * 70)
-
-    print(output_file)
+    save_response(exercise_type=exercise_type, response_text=response_text, response=response)
 
 
 # PUNTO DE ENTRADA
@@ -875,10 +737,5 @@ if __name__ == "__main__":
         main()
 
     except Exception as error:
-
-        print("\nERROR")
-        print("=" * 70)
-
-        print(error)
-
+        print(f"\n ERROR : {type(error).__name__} - {str(error)}\n")
         raise SystemExit(1)

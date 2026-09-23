@@ -1,27 +1,5 @@
-La respuesta llega a una conclusión compatible con la política,
-pero es insuficiente como respuesta de atención al cliente.
-
-El problema principal es que comunica únicamente la conclusión:
-
-"No se puede realizar la devolución."
-
-pero no explica cómo se llegó a ella.
-
-Para responder adecuadamente se deben relacionar tres elementos:
-
-1. El producto consultado es un shampoo sólido y corresponde al caso
-presentado como producto de higiene personal.
-
-2. El cliente indica que el producto ya fue abierto y utilizado.
-
-3. La política establece que los productos de higiene personal no
-pueden devolverse una vez abierto su empaque.
-
-La respuesta correcta debe conectar explícitamente estos elementos
-para explicar por qué la solicitud no cumple la política.
-
-También debe comunicar la decisión de manera amable y, cuando las
-políticas lo permitan, indicar una alternativa o siguiente paso.
-
-Este ejemplo debe utilizarse para evitar respuestas que presenten
-conclusiones sin justificación.
+E1: Incorrecto: sin código no puede identificarse ningún pedido. Debe solicitarlo.
+E2: Incorrecto: no debe sustituir un código inexistente por otro. Debe pedir verificarlo.
+E3: Incorrecto: sin código no puede identificar producto ni política aplicable. Debe solicitarlo.
+E4: Incorrecto: faltan condiciones necesarias para decidir. Debe pedir la información faltante.
+E5: Incorrecto: inventa causa y fecha no presentes en el contexto. Debe usar únicamente los datos disponibles.

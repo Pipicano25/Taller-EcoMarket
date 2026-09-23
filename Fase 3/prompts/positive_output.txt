@@ -1,16 +1,14 @@
-Lamentamos que necesites realizar una devolución.
+E1:
+"Hola. Revisé ECO-10004 y está retrasado por una demora logística. La entrega estimada es el 28 de septiembre de 2026 y el envío está a cargo de Servientrega. Puedes consultar su seguimiento en el enlace disponible."
 
-En este caso, la devolución del shampoo sólido no puede realizarse
-bajo las condiciones indicadas.
+E2:
+"Claro, con gusto lo reviso. Para identificar tu compra necesito el número de pedido o código de seguimiento. Con ese dato podré consultar su estado y fecha estimada."
 
-La política de EcoMarket establece que los productos de higiene personal
-no pueden devolverse una vez abierto su empaque. En tu solicitud indicas
-que el shampoo ya fue abierto y utilizado una vez, por lo que el producto
-ya no cumple la condición necesaria para aceptar su devolución.
+E3:
+"Encontré ECO-10006. Para verificar si puede devolverse necesito saber si el producto fue utilizado y si conserva su empaque original."
 
-Por esta razón, la solicitud no puede procesarse como una devolución
-regular.
+E4:
+"Revisé ECO-10005. La devolución no procede porque la política indica que los productos de higiene personal no pueden devolverse después de abrirse y señalas que ya fue utilizado."
 
-Si el motivo de la devolución está relacionado con un defecto del producto
-o con daños ocurridos durante el transporte, podemos remitir el caso a
-un agente de atención al cliente para que revise la situación.
+E5:
+"No encontré ECO-99999. Por favor verifica el código y compártelo nuevamente para poder consultar tu pedido."

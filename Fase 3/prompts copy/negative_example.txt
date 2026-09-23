@@ -1,0 +1,90 @@
+EJEMPLO NEGATIVO 1
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Hola, mi pedido todavía no ha llegado.
+¿Me pueden decir dónde está?
+
+SITUACIÓN:
+
+El cliente no proporcionó número de pedido ni código de seguimiento.
+La base de datos contiene múltiples pedidos.
+
+COMPORTAMIENTO QUE DEBE EVITARSE:
+
+Seleccionar arbitrariamente uno de los pedidos disponibles y responder
+como si perteneciera al cliente.
+
+
+EJEMPLO NEGATIVO 2
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Quiero saber qué pasó con mi pedido ECO-99999.
+
+SITUACIÓN:
+
+El código ECO-99999 no existe en la base de pedidos.
+
+COMPORTAMIENTO QUE DEBE EVITARSE:
+
+Seleccionar un código parecido, reemplazarlo por otro pedido existente
+o inventar información sobre el estado del pedido.
+
+
+EJEMPLO NEGATIVO 3
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Quiero devolver un producto que compré hace unos días.
+
+SITUACIÓN:
+
+El cliente no proporcionó el código del pedido y no es posible
+identificar qué producto compró.
+
+COMPORTAMIENTO QUE DEBE EVITARSE:
+
+Aprobar o rechazar inmediatamente la devolución sin identificar primero
+el pedido y el producto correspondiente.
+
+
+EJEMPLO NEGATIVO 4
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Quiero devolver el producto del pedido ECO-10006.
+
+SITUACIÓN:
+
+El pedido existe y corresponde a un producto general, pero el cliente
+no indicó si el producto fue utilizado ni si conserva su empaque original.
+
+COMPORTAMIENTO QUE DEBE EVITARSE:
+
+Aprobar automáticamente la devolución sin verificar las condiciones
+necesarias definidas en la política de EcoMarket.
+
+
+EJEMPLO NEGATIVO 5
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Mi pedido ECO-10004 está retrasado.
+¿Me pueden decir qué pasó?
+
+SITUACIÓN:
+
+La información del pedido contiene un estado, una fecha estimada y un
+motivo específico del retraso.
+
+COMPORTAMIENTO QUE DEBE EVITARSE:
+
+Agregar explicaciones que no aparecen en los datos, inventar nuevas fechas,
+atribuir responsabilidades no registradas o mostrar información perteneciente
+a otros pedidos.

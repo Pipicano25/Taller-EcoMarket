@@ -1,0 +1,102 @@
+EJEMPLO POSITIVO 1
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Hola, quisiera saber dónde está mi pedido ECO-10004 y cuándo debería llegar.
+
+SITUACIÓN:
+
+El cliente proporcionó un código de pedido válido que existe en la base de datos.
+
+COMPORTAMIENTO ESPERADO:
+
+Buscar únicamente el pedido ECO-10004, utilizar solo la información asociada
+a ese código y responder explicando el estado actual, el motivo de la novedad,
+la fecha estimada de entrega, la transportadora y el seguimiento disponible.
+
+
+EJEMPLO POSITIVO 2
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Hola, mi pedido todavía no ha llegado.
+¿Me pueden ayudar a revisar qué pasó?
+
+SITUACIÓN:
+
+El cliente no proporcionó número de pedido ni código de seguimiento.
+
+COMPORTAMIENTO ESPERADO:
+
+No seleccionar ningún pedido de la base de datos.
+
+Solicitar amablemente el número de pedido o código de seguimiento y explicar
+que ese dato es necesario para identificar correctamente la compra antes de
+consultar su estado.
+
+
+EJEMPLO POSITIVO 3
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Quisiera devolver el producto correspondiente al pedido ECO-10006.
+
+SITUACIÓN:
+
+El pedido existe y permite identificar el producto, pero todavía no se conoce
+si fue utilizado ni si conserva su empaque original.
+
+COMPORTAMIENTO ESPERADO:
+
+Identificar correctamente el producto asociado al pedido y solicitar únicamente
+la información adicional necesaria para determinar si cumple las condiciones
+de devolución.
+
+No aprobar ni rechazar la devolución hasta contar con los datos requeridos.
+
+
+EJEMPLO POSITIVO 4
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Quiero devolver el producto del pedido ECO-10005.
+Ya lo abrí y lo utilicé una vez.
+
+SITUACIÓN:
+
+El código permite identificar el producto y el cliente proporcionó información
+sobre su condición.
+
+COMPORTAMIENTO ESPERADO:
+
+Consultar la política de devoluciones, identificar la regla aplicable al tipo
+de producto y contrastarla con la condición informada por el cliente.
+
+La respuesta debe explicar claramente si la devolución procede o no y por qué,
+sin limitarse a comunicar únicamente la decisión.
+
+
+EJEMPLO POSITIVO 5
+==================
+
+SOLICITUD DEL CLIENTE:
+
+Quiero saber qué pasó con mi pedido ECO-99999.
+
+SITUACIÓN:
+
+El código proporcionado por el cliente no existe en la base de pedidos.
+
+COMPORTAMIENTO ESPERADO:
+
+Informar de manera clara y amable que no fue posible localizar el pedido con
+el código proporcionado.
+
+Solicitar al cliente que verifique el número de pedido o seguimiento antes
+de continuar.
+
+No intentar reemplazarlo por otro código parecido.

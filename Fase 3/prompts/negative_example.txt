@@ -1,10 +1,5 @@
-SOLICITUD DEL CLIENTE:
-
-Quiero devolver un shampoo sólido que compré en EcoMarket.
-
-El producto ya fue abierto y utilizado una vez.
-
-POLÍTICA DISPONIBLE:
-
-Los productos de higiene personal no pueden devolverse una vez
-abierto su empaque.
+E1: Cliente pregunta por su pedido sin proporcionar código.
+E2: Cliente consulta el código ECO-99999, que no existe.
+E3: Cliente solicita una devolución sin proporcionar código de pedido.
+E4: Cliente solicita devolver ECO-10006, pero no indica si fue usado ni si conserva el empaque.
+E5: Cliente consulta ECO-10004, cuyo pedido tiene información específica de retraso.

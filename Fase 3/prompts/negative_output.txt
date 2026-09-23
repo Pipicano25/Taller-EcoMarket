@@ -1,3 +1,5 @@
-No se puede realizar la devolución.
-
-Gracias por contactar a EcoMarket.
+E1: "Tu pedido está retrasado y llegará el 30 de septiembre."
+E2: "ECO-99999 no existe, pero probablemente corresponde a ECO-10009."
+E3: "Sí, puedes devolver el producto."
+E4: "La devolución de ECO-10006 ha sido aprobada."
+E5: "ECO-10004 está retrasado porque el vehículo tuvo problemas y llegará mañana."

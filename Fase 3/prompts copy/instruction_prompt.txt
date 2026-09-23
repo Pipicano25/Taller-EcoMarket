@@ -10,21 +10,11 @@ Antes de responder:
 3. No asumas que un registro del contexto pertenece al cliente si este
 no proporcionó un identificador que permita relacionarlo.
 
-4. Para pedidos o devoluciones, identifica primero el código proporcionado
-por el cliente. El identificador puede presentarse como código completo
-("ECO-10004") o únicamente como su parte numérica ("10004").
+4. Para pedidos o devoluciones, si falta el código del pedido o número
+de seguimiento, solicítalo antes de utilizar información de un registro.
 
-Si el cliente no proporciona ninguno de estos identificadores, solicítalo
-antes de utilizar información de un pedido.
-
-5. Para buscar el pedido:
-
-- Si el cliente proporciona "ECO-10004", busca exactamente "ECO-10004".
-- Si proporciona "10004", compara ese valor únicamente con la parte numérica
-  de los códigos disponibles, ignorando el prefijo "ECO-".
-- Por tanto, "10004" identifica a "ECO-10004".
-- No realices coincidencias parciales, aproximadas o por similitud.
-- Si no existe una coincidencia única, solicita al cliente verificar el código.
+5. Si existe un código, busca únicamente una coincidencia exacta y utiliza
+solo la información correspondiente a ese pedido.
 
 6. No mezcles información de diferentes pedidos ni inventes datos,
 políticas, fechas, productos o excepciones.

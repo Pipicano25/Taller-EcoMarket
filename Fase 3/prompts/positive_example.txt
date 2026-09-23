@@ -1,10 +1,13 @@
-SOLICITUD DEL CLIENTE:
+E1: "¿Dónde está mi pedido ECO-10004?"
 
-Quiero devolver un shampoo sólido que compré en EcoMarket.
+E2: "Mi pedido no ha llegado. ¿Pueden revisarlo?"
+    No proporciona código.
 
-El producto ya fue abierto y utilizado una vez.
+E3: "Quiero devolver ECO-10006."
+    Falta saber si fue usado y si conserva el empaque.
 
-POLÍTICA DISPONIBLE:
+E4: "Quiero devolver ECO-10005. Ya lo abrí y utilicé."
+    Hay información suficiente para consultar la política.
 
-Los productos de higiene personal no pueden devolverse una vez
-abierto su empaque.
+E5: "¿Qué pasó con ECO-99999?"
+    El código no existe.

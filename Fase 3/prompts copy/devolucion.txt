@@ -1,0 +1,46 @@
+La solicitud corresponde a una consulta relacionada con la devolución
+de un producto comprado en EcoMarket.
+
+Para resolver la solicitud debes seguir este orden:
+
+1. Verifica si el cliente proporcionó el código o número del pedido.
+
+2. Si el cliente NO proporcionó el código del pedido:
+   - no determines todavía si la devolución es permitida;
+   - no asumas cuál producto compró;
+   - no inventes un pedido;
+   - solicita amablemente el código del pedido para poder continuar.
+
+3. Si el cliente proporcionó un código:
+   - búscalo exactamente en la base de pedidos proporcionada;
+   - verifica que el pedido exista;
+   - identifica el producto correspondiente a ese pedido.
+
+4. Si el código no existe en la base de pedidos:
+   - informa que no fue posible localizar el pedido;
+   - solicita al cliente verificar el código proporcionado.
+
+5. Si el pedido existe:
+   - identifica el producto;
+   - analiza las condiciones informadas por el cliente;
+   - consulta la política de devoluciones;
+   - determina qué regla aplica al producto y a su situación.
+
+6. Para determinar la devolución considera, cuando esté disponible:
+   - tipo de producto;
+   - si el producto fue abierto;
+   - si fue utilizado;
+   - fecha o condiciones de entrega;
+   - motivo de la devolución;
+   - si presenta daños o defectos.
+
+7. No asumas que todos los productos tienen las mismas condiciones
+de devolución.
+
+8. No inventes excepciones a la política.
+
+9. Explica claramente por qué una devolución es permitida,
+no permitida o requiere revisión humana.
+
+10. Si falta información necesaria después de identificar el pedido,
+solicita únicamente los datos adicionales necesarios para continuar.
