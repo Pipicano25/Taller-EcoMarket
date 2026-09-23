@@ -1,0 +1,36 @@
+FECHA Y HORA
+============
+2026-09-22 22:45:50
+
+
+TIPO DE EJERCICIO
+=================
+pedido
+
+
+MODELO
+======
+meta-llama/Llama-3.1-8B-Instruct
+
+
+PROVEEDOR
+=========
+auto
+
+
+CONSUMO DE TOKENS
+=================
+
+Tokens de entrada : 2738
+Tokens de salida  : 77
+Tokens totales    : 2815
+
+
+RESPUESTA DEL MODELO
+====================
+
+El número de seguimiento del pedido que mencionas es ECO-9999.
+
+Desafortunadamente, no encontramos información sobre un pedido con ese número de seguimiento en nuestra base de datos.
+
+Si tienes el número de seguimiento del pedido, por favor, proporcionámoslo nuevamente para que podamos ayudarte a encontrar la información sobre tu pedido.

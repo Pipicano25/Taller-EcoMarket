@@ -1,51 +1,46 @@
-Analiza el CASO REAL proporcionado utilizando exclusivamente la
-información disponible en el contexto.
+Analiza la solicitud real del cliente utilizando exclusivamente la
+información disponible de EcoMarket.
 
-Antes de redactar la respuesta final, realiza internamente las
-siguientes verificaciones:
+Antes de determinar una respuesta, sigue internamente este procedimiento:
 
-A. IDENTIFICACIÓN
-Determina qué está solicitando el cliente y cuál es el objeto principal
-de la consulta: pedido, devolución, producto u otra situación.
+PRIMERO: verifica si existen los datos mínimos necesarios para resolver
+la solicitud.
 
-B. EVIDENCIA
-Localiza los datos o reglas del contexto que son directamente relevantes
-para resolver la solicitud.
+Para solicitudes de devolución, el código del pedido es obligatorio.
 
-C. CONTRASTE
-Compara la situación específica del cliente con los datos, condiciones
-o reglas encontradas.
+Si el cliente NO proporciona el código del pedido:
 
-D. DECISIÓN
-Determina la conclusión únicamente a partir de ese contraste.
+- NO evalúes todavía la política de devolución;
+- NO asumas qué producto compró;
+- NO inventes información;
+- solicita amablemente el código del pedido;
+- termina la respuesta en ese punto.
 
-E. VALIDACIÓN
-Antes de responder, comprueba:
-- que no hayas inventado información;
-- que la conclusión esté respaldada por el contexto;
-- que no hayas omitido una condición importante;
-- que la respuesta explique el motivo de la conclusión.
+Si el cliente proporciona el código:
 
-F. RESPUESTA
-Genera una respuesta natural para el cliente.
+1. Busca el pedido en la base de pedidos.
+2. Verifica que exista.
+3. Identifica el producto asociado.
+4. Identifica las condiciones indicadas por el cliente.
+5. Busca la regla correspondiente en la política de devoluciones.
+6. Contrasta la situación real del producto con esa regla.
+7. Determina la conclusión únicamente a partir de ese contraste.
+8. Explica claramente por qué la devolución es permitida o no.
 
-La respuesta debe explicar:
+Si el pedido no existe:
+indica que no fue posible encontrarlo y solicita verificar el código.
 
-- cuál es la situación o decisión;
-- qué información del contexto es relevante;
-- por qué esa información conduce a la conclusión;
-- qué debe hacer el cliente a continuación, cuando corresponda.
+Si falta información adicional para tomar la decisión:
+solicita únicamente esa información.
 
-No muestres el análisis interno ni enumeres estas etapas.
+Nunca inventes:
+- pedidos;
+- productos;
+- políticas;
+- fechas;
+- excepciones;
+- condiciones no proporcionadas.
 
-No respondas únicamente con una conclusión como:
-"Sí", "No", "Está retrasado" o "No puede devolverse".
+No muestres el razonamiento interno paso a paso.
 
-La respuesta debe explicar el POR QUÉ utilizando únicamente evidencia
-del contexto proporcionado.
-
-Si no existe información suficiente para justificar una respuesta,
-indica claramente qué información falta y recomienda revisión por
-un agente humano.
-
-Genera únicamente la respuesta final destinada al cliente.
+Genera únicamente la respuesta dirigida al cliente.

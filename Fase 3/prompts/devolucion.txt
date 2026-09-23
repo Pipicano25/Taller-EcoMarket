@@ -1,59 +1,46 @@
-TAREA:
-Atender una solicitud de devolución de un cliente de EcoMarket.
+La solicitud corresponde a una consulta relacionada con la devolución
+de un producto comprado en EcoMarket.
 
-SOLICITUD DEL CLIENTE:
+Para resolver la solicitud debes seguir este orden:
 
-Número de pedido: ECO-10005
-Producto: Shampoo sólido natural
-Situación: El producto fue abierto y utilizado una vez.
-El cliente desea devolverlo.
+1. Verifica si el cliente proporcionó el código o número del pedido.
 
-POLÍTICA DE DEVOLUCIONES DISPONIBLE:
+2. Si el cliente NO proporcionó el código del pedido:
+   - no determines todavía si la devolución es permitida;
+   - no asumas cuál producto compró;
+   - no inventes un pedido;
+   - solicita amablemente el código del pedido para poder continuar.
 
-{{POLITICA_DEVOLUCIONES}}
+3. Si el cliente proporcionó un código:
+   - búscalo exactamente en la base de pedidos proporcionada;
+   - verifica que el pedido exista;
+   - identifica el producto correspondiente a ese pedido.
 
-INSTRUCCIONES:
+4. Si el código no existe en la base de pedidos:
+   - informa que no fue posible localizar el pedido;
+   - solicita al cliente verificar el código proporcionado.
 
-1. Analiza la solicitud utilizando únicamente la política proporcionada.
+5. Si el pedido existe:
+   - identifica el producto;
+   - analiza las condiciones informadas por el cliente;
+   - consulta la política de devoluciones;
+   - determina qué regla aplica al producto y a su situación.
 
-2. Determina claramente si la devolución es PERMITIDA o NO PERMITIDA.
+6. Para determinar la devolución considera, cuando esté disponible:
+   - tipo de producto;
+   - si el producto fue abierto;
+   - si fue utilizado;
+   - fecha o condiciones de entrega;
+   - motivo de la devolución;
+   - si presenta daños o defectos.
 
-3. Justifica la decisión utilizando exclusivamente la política de
-devoluciones proporcionada.
+7. No asumas que todos los productos tienen las mismas condiciones
+de devolución.
 
-4. Si la devolución NO está permitida:
-   - explica claramente por qué no puede realizarse;
-   - identifica qué condición de la solicitud incumple la política;
-   - menciona la regla de la política que aplica;
-   - explica cómo la situación del producto se relaciona con esa regla;
-   - responde de manera amable y empática.
+8. No inventes excepciones a la política.
 
-5. Si la devolución está permitida:
-   - explica por qué cumple las condiciones;
-   - indica los pasos que debe seguir el cliente.
+9. Explica claramente por qué una devolución es permitida,
+no permitida o requiere revisión humana.
 
-6. Si el caso requiere revisión humana, indícalo claramente.
-
-7. No inventes políticas, excepciones o información adicional.
-
-8. No respondas únicamente "la devolución no es posible".
-Debes explicar al cliente la razón de la decisión.
-
-FORMATO DE RESPUESTA:
-
-Estado de la solicitud:
-[Devolución permitida / Devolución no permitida]
-
-Motivo:
-[Explicación clara de la decisión]
-
-Política aplicada:
-[Regla correspondiente]
-
-Explicación al cliente:
-[Explicación amable y comprensible]
-
-Siguiente paso:
-[Acción que puede realizar el cliente]
-
-Responde como un agente de servicio al cliente de EcoMarket.
+10. Si falta información necesaria después de identificar el pedido,
+solicita únicamente los datos adicionales necesarios para continuar.

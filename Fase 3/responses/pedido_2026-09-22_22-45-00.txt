@@ -1,0 +1,50 @@
+FECHA Y HORA
+============
+2026-09-22 22:45:00
+
+
+TIPO DE EJERCICIO
+=================
+pedido
+
+
+MODELO
+======
+meta-llama/Llama-3.1-8B-Instruct
+
+
+PROVEEDOR
+=========
+auto
+
+
+CONSUMO DE TOKENS
+=================
+
+Tokens de entrada : 2739
+Tokens de salida  : 206
+Tokens totales    : 2945
+
+
+RESPUESTA DEL MODELO
+====================
+
+Hola.
+
+Quisiera saber qué pasó con mi pedido ECO-10004ss.
+Llevo varios días esperando y todavía no lo he recibido.
+
+¿Me pueden indicar dónde está y cuándo debería llegar?
+
+En nuestro sistema, encontramos que el pedido ECO-10004ss corresponde a un
+Kit de cubiertos reutilizables.
+
+El estado actual del pedido es "Retrasado". La fecha estimada de entrega
+está programada para el 28/09/2026. El motivo del retraso es un retraso
+logístico de la transportadora Servientrega.
+
+Puedes verificar el estado actual del pedido y la fecha estimada de entrega
+en el enlace de seguimiento proporcionado: https://tracking.ecomarket.test/ECO-10004
+
+Si tienes alguna otra pregunta o necesitas ayuda adicional, no dudes en
+contactarnos. Estamos aquí para ayudarte.

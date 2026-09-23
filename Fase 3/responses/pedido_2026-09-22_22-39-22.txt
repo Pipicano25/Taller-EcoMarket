@@ -1,0 +1,40 @@
+FECHA Y HORA
+============
+2026-09-22 22:39:22
+
+
+TIPO DE EJERCICIO
+=================
+pedido
+
+
+MODELO
+======
+meta-llama/Llama-3.1-8B-Instruct
+
+
+PROVEEDOR
+=========
+auto
+
+
+CONSUMO DE TOKENS
+=================
+
+Tokens de entrada : 2738
+Tokens de salida  : 119
+Tokens totales    : 2857
+
+
+RESPUESTA DEL MODELO
+====================
+
+El número de seguimiento del pedido es ECO-10004.
+
+Según la información disponible, el estado del pedido es "Retrasado" y la fecha estimada de entrega es el 28/09/2026.
+
+El motivo del retraso es un "Retraso logístico de la transportadora".
+
+Puedes seguir el seguimiento del pedido en el enlace proporcionado: https://tracking.ecomarket.test/ECO-10004.
+
+Si tienes alguna otra pregunta o necesitas ayuda adicional, no dudes en hacérmelo saber.
