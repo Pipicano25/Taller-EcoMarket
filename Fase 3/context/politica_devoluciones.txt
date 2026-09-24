@@ -24,3 +24,6 @@ El caso debe ser escalado a un agente humano.
 7. Para iniciar una devolución válida:
 El cliente debe proporcionar el número de pedido y el producto
 que desea devolver.
+
+8. Aclaración sobre el estado del pedido:
+El estado "Entregado" no impide una devolución.

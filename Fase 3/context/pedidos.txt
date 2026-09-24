@@ -81,3 +81,11 @@ Estado: En tránsito
 Fecha estimada de entrega: 25/09/2026
 Transportadora: Servientrega
 Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10010
+
+PEDIDO 11
+Número de seguimiento: ECO-10011
+Producto: Cuaderno de papel reciclado
+Estado: Entregado
+Fecha de entrega: 19/09/2026
+Transportadora: Servientrega
+Enlace de seguimiento: https://tracking.ecomarket.test/ECO-10011
