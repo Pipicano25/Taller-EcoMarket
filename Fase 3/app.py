@@ -395,9 +395,7 @@ CASO REAL A RESOLVER
 ====================
 
 >>>>>
-
 {content}
-
 <<<<<
 """.strip(),
         },
