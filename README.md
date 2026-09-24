@@ -4,7 +4,7 @@
 
 **Autores:** Anderson Pipicano · Fredy Alvarez
 
-EcoBot es un asistente de atención al cliente para **EcoMarket**, un e-commerce de productos sostenibles. Usa un LLM open-source (**Meta Llama 3.1 8B Instruct**) guiado con **ingeniería de prompts** y **contexto inyectado** (_grounding_). Así responde consultas sobre el **estado de pedidos** y **devoluciones** sin inventar información.
+EcoBot es un asistente de atención al cliente para **EcoMarket**, un e-commerce de productos sostenibles. Usa un LLM open-source (**Meta Llama 3.1 8B Instruct**) guiado con **ingeniería de prompts** y **contexto inyectado**. Así responde consultas sobre el **estado de pedidos** y **devoluciones** sin inventar información.
 
 ---
 
@@ -109,7 +109,7 @@ La matriz completa de riesgos está en la _Tabla 1_ del caso de estudio.
 
 ## 5. Fase 3 — Implementación del prototipo
 
-El prototipo usa **Llama 3.1 8B Instruct** a través de **Hugging Face Inference Providers** (`huggingface_hub.InferenceClient`). En producción el modelo se autoalojaría con vLLM u Ollama (ver Fase 1). La interfaz de _chat completions_ es la misma, así que migrar solo exige cambiar el cliente.
+El prototipo usa **Llama 3.1 8B Instruct** a través de **Hugging Face Inference Providers** (`huggingface_hub.InferenceClient`). En producción el modelo se autoalojaría con vLLM u Ollama (ver Fase 1).
 
 ### Flujo de una ejecución
 
@@ -147,6 +147,9 @@ Cada archivo de contexto va etiquetado con su fuente (`FUENTE: pedidos.txt`) par
 |  4  | `user` → `assistant` | `positive_example.txt` → `positive_output.txt`                              | **Few-shot prompting.** Demuestra la respuesta ideal como turno del asistente.                                                                                                   |
 |  5  | `user`               | Solicitud + reglas del tipo + contexto, entre delimitadores `>>>>> … <<<<<` | **Grounding / RAG en contexto** con **delimitadores** que separan instrucciones de datos.                                                                                        |
 |  6  | `user`               | `instruction_prompt.txt`                                                    | **Instrucción final** (_recency_): el procedimiento de análisis queda al final, justo antes de generar.                                                                          |
+
+[`Ver promts`](Fase%203/prompts)
+[`Ver contexto`](Fase%203/context)
 
 **Decisiones de diseño relevantes:**
 
